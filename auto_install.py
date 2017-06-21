@@ -114,7 +114,7 @@ else:
             role = raw_input("***Node is mon/osd:")
             if role == "mon":
                 print "----configuring ceph mon------"
-                os.system("yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/MON/x86_64/")
+                os.system("yum-config-manager --add http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-1.3-rhel-7-compose/latest-RHCEPH-1.3-RHEL-7/compose/MON/x86_64/os/")
                 file = "/etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_MON_x86_64_.repo"
                 tempFile = open(file, "r+")
                 for line in fileinput.input(file):
@@ -125,7 +125,7 @@ else:
                 tempFile.close()
             else:
                 print "----configuring ceph osd------"
-                os.system("yum-config-manager --add  http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/OSD/x86_64/")
+                os.system("yum-config-manager --add  http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-1.3-rhel-7-compose/latest-RHCEPH-1.3-RHEL-7/compose/OSD/x86_64/os/")
                 file = "/etc/yum.repos.d/download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_ceph-2-rhel-7-compose_latest-RHCEPH-2-RHEL-7_compose_OSD_x86_64_.repo"
                 tempFile = open(file, "r+")
                 for line in fileinput.input(file):
