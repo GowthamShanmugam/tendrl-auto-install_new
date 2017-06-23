@@ -3,6 +3,9 @@ import fileinput
 import os
 import socket
 
+print "--Adding global username and email--"
+os.system("git config --global user.name 'GowthamShanmugam'")
+os.system("git config --global user.email 'gshanmug@redhat.com'")
 
 print "--------Basic configuration------"
 cmds = ["setenforce 0", "yum -y install yum-utils -y", "yum-config-manager --add https://copr.fedorainfracloud.org/coprs/tendrl/release/repo/epel-7/tendrl-release-epel-7.repo", "yum-config-manager --add https://copr.fedorainfracloud.org/coprs/tendrl/dependencies/repo/epel-7/tendrl-dependencies-epel-7.repo", "yum -y install epel-release -y", "service firewalld stop", "systemctl disable firewalld", "iptables --flush"]
