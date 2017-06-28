@@ -4,6 +4,7 @@ import os
 import socket
 
 print "--Adding global username and email--"
+os.system("yum -y install git -y")
 os.system("git config --global user.name 'GowthamShanmugam'")
 os.system("git config --global user.email 'gshanmug@redhat.com'")
 
